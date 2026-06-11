@@ -12,11 +12,6 @@ import {
 
 export default function BuilderPage() {
 
-  const [paid, setPaid] =
-    useState(false);
-
-  
-
   const [formData, setFormData] =
     useState<ResumeData>({
       name: "",
@@ -398,8 +393,7 @@ export default function BuilderPage() {
 
     const options = {
 
-      key:
-        "YOUR_RAZORPAY_KEY",
+      key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
 
       amount: 1900,
 
@@ -410,16 +404,12 @@ export default function BuilderPage() {
       description:
         "Resume Download",
 
-      handler: function () {
+      handler: function (response: any) {
 
-        setPaid(true);
+  console.log(response);
 
-        setTimeout(() => {
-
-          downloadResume();
-
-        }, 500);
-      },
+  downloadResume();
+  },
 
       theme: {
         color: "#000000",
@@ -833,7 +823,11 @@ export default function BuilderPage() {
 
           {/* DOWNLOAD */}
 
-          <div className="space-y-4">
+          <p className="text-center text-gray-500 text-sm">
+Choose premium download or unlock one free download by watching an ad.
+</p>
+
+          <div className="space-y-4 pt-4">
 
             <button
               onClick={
@@ -841,7 +835,7 @@ export default function BuilderPage() {
               }
               className="w-full bg-black text-white py-5 rounded-2xl text-lg font-black"
             >
-              Pay ₹19 & Download
+              Pay ₹19 • Instant Download
             </button>
 
             <button
@@ -850,7 +844,7 @@ export default function BuilderPage() {
               }
               className="w-full border border-black py-5 rounded-2xl text-lg font-black"
             >
-              Watch Ad & Download
+              Watch Ad • Free Download
             </button>
 
           </div>

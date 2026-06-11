@@ -28,86 +28,82 @@ interface Props {
 }
 
 export default function ResumePreview({ data }: Props) {
-
-  const templateProps = { data };
-
   const renderTemplate = () => {
-
     switch (data.template) {
-
       case "Creative":
-        return <CreativeTemplate {...templateProps} />;
+        return <CreativeTemplate data={data} />;
 
       case "Business":
-        return <BusinessTemplate {...templateProps} />;
+        return <BusinessTemplate data={data} />;
 
       case "Classic":
-        return <ClassicTemplate {...templateProps} />;
+        return <ClassicTemplate data={data} />;
 
       case "Professional":
-        return <ProfessionalTemplate {...templateProps} />;
+        return <ProfessionalTemplate data={data} />;
 
       case "Minimal":
-        return <MinimalTemplate {...templateProps} />;
+        return <MinimalTemplate data={data} />;
 
       case "Dark":
-        return <DarkTemplate {...templateProps} />;
+        return <DarkTemplate data={data} />;
 
       case "Elegant":
-        return <ElegantTemplate {...templateProps} />;
+        return <ElegantTemplate data={data} />;
 
       case "Corporate":
-        return <CorporateTemplate {...templateProps} />;
+        return <CorporateTemplate data={data} />;
 
       case "Compact":
-        return <CompactTemplate {...templateProps} />;
+        return <CompactTemplate data={data} />;
 
       case "Gradient":
-        return <GradientTemplate {...templateProps} />;
+        return <GradientTemplate data={data} />;
 
       case "Developer":
-        return <DeveloperTemplate {...templateProps} />;
+        return <DeveloperTemplate data={data} />;
 
       case "Designer":
-        return <DesignerTemplate {...templateProps} />;
+        return <DesignerTemplate data={data} />;
 
       case "Student":
-        return <StudentTemplate {...templateProps} />;
+        return <StudentTemplate data={data} />;
 
       case "Executive":
-        return <ExecutiveTemplate {...templateProps} />;
+        return <ExecutiveTemplate data={data} />;
 
       case "Luxury":
-        return <LuxuryTemplate {...templateProps} />;
+        return <LuxuryTemplate data={data} />;
 
       case "Startup":
-        return <StartupTemplate {...templateProps} />;
+        return <StartupTemplate data={data} />;
 
       case "Tech":
-        return <TechTemplate {...templateProps} />;
+        return <TechTemplate data={data} />;
 
       case "ATSModern":
-        return <ATSModernTemplate {...templateProps} />;
+        return <ATSModernTemplate data={data} />;
 
       case "Simple":
-        return <SimpleTemplate {...templateProps} />;
+        return <SimpleTemplate data={data} />;
 
       default:
-        return <ModernTemplate {...templateProps} />;
+        return <ModernTemplate data={data} />;
     }
   };
 
   return (
     <div className="w-full overflow-x-auto py-4">
-
       <div
         id="resume-content"
         className="
           bg-white
           shadow-2xl
+          print:shadow-none
           mx-auto
           w-full
           max-w-[210mm]
+          rounded-lg
         "
         style={{
           minHeight: "297mm",
@@ -118,7 +114,6 @@ export default function ResumePreview({ data }: Props) {
       >
         {renderTemplate()}
       </div>
-
     </div>
   );
 }
