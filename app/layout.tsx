@@ -17,8 +17,8 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* Monetag */}
-        <Script id="monetag" strategy="afterInteractive">
+        {/* Monetag In-Page Push Banner */}
+        <Script id="monetag-banner" strategy="afterInteractive">
           {`
             (function(s){
               s.dataset.zone='11131993',
@@ -31,6 +31,7 @@ export default function RootLayout({
             );
           `}
         </Script>
+
       </body>
     </html>
   );
