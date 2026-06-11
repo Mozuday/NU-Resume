@@ -1,5 +1,7 @@
 "use client";
 
+import AdsterraBanner from "../../components/AdsterraBanner";
+
 import { useState } from "react";
 
 import ResumePreview from "../../components/ResumePreview";
@@ -846,6 +848,8 @@ Choose premium download or unlock one free download by watching an ad.
             >
               Watch Ad • Free Download
             </button>
+
+            <AdsterraBanner />
 
           </div>
 

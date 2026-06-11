@@ -9,6 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+
         {children}
 
         {/* Razorpay */}
@@ -17,20 +18,11 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* Monetag In-Page Push Banner */}
-        <Script id="monetag-banner" strategy="afterInteractive">
-          {`
-            (function(s){
-              s.dataset.zone='11131993',
-              s.src='https://nap5k.com/tag.min.js'
-            })(
-              [document.documentElement, document.body]
-                .filter(Boolean)
-                .pop()
-                .appendChild(document.createElement('script'))
-            );
-          `}
-        </Script>
+        {/* Adsterra Social Bar */}
+        <Script
+          src="https://pl29711192.effectivecpmnetwork.com/6e/33/d6/6e33d6731772e9dba803696d5691acd9.js"
+          strategy="afterInteractive"
+        />
 
       </body>
     </html>
