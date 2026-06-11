@@ -375,16 +375,9 @@ export default function BuilderPage() {
   // ======================================================
 
   const handleWatchAd = () => {
-
-    alert(
-      "Rewarded Ad Here"
-    );
-
-    setTimeout(() => {
-
-      downloadResume();
-
-    }, 1000);
+  setTimeout(() => {
+    downloadResume();
+  }, 500);
   };
 
   // ======================================================

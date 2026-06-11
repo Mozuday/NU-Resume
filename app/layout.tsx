@@ -18,6 +18,12 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
+        {/* Adsterra popunder */}
+        <Script
+          src="https://pl29711191.effectivecpmnetwork.com/c1/97/d1/c197d125088c0a54790f03fcef24135f.js"
+          strategy="afterInteractive"
+        />
+
         {/* Adsterra Social Bar */}
         <Script
           src="https://pl29711192.effectivecpmnetwork.com/6e/33/d6/6e33d6731772e9dba803696d5691acd9.js"
