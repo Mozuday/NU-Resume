@@ -374,11 +374,18 @@ export default function BuilderPage() {
   // WATCH AD
   // ======================================================
 
-  const handleWatchAd = () => {
+ const handleWatchAd = () => {
+  const script = document.createElement("script");
+
+  script.src =
+    "https://pl29711191.effectivecpmnetwork.com/c1/97/d1/c197d125088c0a54790f03fcef24135f.js";
+
+  document.body.appendChild(script);
+
   setTimeout(() => {
     downloadResume();
-  }, 500);
-  };
+  }, 1000);
+};
 
   // ======================================================
   // PAYMENT
