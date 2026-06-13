@@ -14,6 +14,14 @@ import {
 
 export default function BuilderPage() {
 
+  const freeTemplates = [
+  "Modern",
+  "Minimal",
+  "ATSModern",
+  "Simple",
+  "Classic",
+];
+
   const [formData, setFormData] =
     useState<ResumeData>({
       name: "",
@@ -33,6 +41,9 @@ export default function BuilderPage() {
 
       sections: [],
     });
+
+    const isPremiumTemplate =
+  !freeTemplates.includes(formData.template);
 
   // ======================================================
   // INPUTS
@@ -376,10 +387,6 @@ export default function BuilderPage() {
 
  const handleWatchAd = () => {
   const script = document.createElement("script");
-
-  script.src =
-    "https://pl29711191.effectivecpmnetwork.com/c1/97/d1/c197d125088c0a54790f03fcef24135f.js";
-
   document.body.appendChild(script);
 
   setTimeout(() => {
@@ -467,24 +474,24 @@ export default function BuilderPage() {
 
             <option>Modern</option>
             <option>Minimal</option>
-            <option>Corporate</option>
-            <option>Creative</option>
-            <option>Elegant</option>
-            <option>Professional</option>
-            <option>Dark</option>
+            <option>Corporate ⭐</option>
+            <option>Creative ⭐</option>
+            <option>Elegant ⭐</option>
+            <option>Professional ⭐</option>
+            <option>Dark ⭐</option>
             <option>Classic</option>
-            <option>Gradient</option>
-            <option>Compact</option>
-            <option>Developer</option>
-            <option>Executive</option>
-            <option>Designer</option>
-            <option>Startup</option>
-            <option>Luxury</option>
-            <option>Tech</option>
-            <option>Student</option>
+            <option>Gradient ⭐</option>
+            <option>Compact ⭐</option>
+            <option>Developer ⭐</option>
+            <option>Executive ⭐</option>
+            <option>Designer ⭐</option>
+            <option>Startup ⭐</option>
+            <option>Luxury ⭐</option>
+            <option>Tech ⭐</option>
+            <option>Student ⭐</option>
             <option>Simple</option>
             <option>ATSModern</option>
-            <option>Business</option>
+            <option>Business ⭐</option>
 
           </select>
 
@@ -825,33 +832,49 @@ export default function BuilderPage() {
 
           {/* DOWNLOAD */}
 
-          <p className="text-center text-gray-500 text-sm">
-Choose premium download or unlock one free download by watching an ad.
-</p>
+          <div className="bg-gray-50 border rounded-2xl p-4">
 
-          <div className="space-y-4 pt-4">
+  <p className="font-bold">
+    Selected Template
+  </p>
 
-            <button
-              onClick={
-                handlePayment
-              }
-              className="w-full bg-black text-white py-5 rounded-2xl text-lg font-black"
-            >
-              Pay ₹19 • Instant Download
-            </button>
+  <p className="text-gray-500 mt-1">
 
-            <button
-              onClick={
-                handleWatchAd
-              }
-              className="w-full border border-black py-5 rounded-2xl text-lg font-black"
-            >
-              Watch Ad • Free Download
-            </button>
+    {formData.template}
 
-            <AdsterraBanner />
+    {isPremiumTemplate
+      ? " ⭐ Premium"
+      : " • Free"}
 
-          </div>
+  </p>
+
+</div>
+
+<div className="space-y-4 pt-4">
+
+  {isPremiumTemplate ? (
+
+    <button
+      onClick={handlePayment}
+      className="w-full bg-black text-white py-5 rounded-2xl text-lg font-black"
+    >
+      ⭐ Premium Template • Pay ₹19
+    </button>
+
+  ) : (
+
+    <button
+      onClick={handleWatchAd}
+      className="w-full border border-black py-5 rounded-2xl text-lg font-black"
+    >
+      Free Download
+    </button>
+
+  )}
+
+  <AdsterraBanner />
+
+</div>
 
         </div>
 
