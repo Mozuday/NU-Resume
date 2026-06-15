@@ -1,6 +1,6 @@
 "use client";
 
-import AdsterraBanner from "../../components/AdsterraBanner";
+import AdsenseBanner from "../../components/AdsenseBanner";
 
 import { useState } from "react";
 
@@ -872,7 +872,7 @@ export default function BuilderPage() {
 
   )}
 
-  <AdsterraBanner />
+  <AdsenseBanner />
 
 </div>
 
