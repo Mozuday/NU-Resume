@@ -30,55 +30,55 @@ interface Props {
 export default function ResumePreview({ data }: Props) {
   const renderTemplate = () => {
     switch (data.template) {
-      case "Creative":
+      case "Creative ⭐":
         return <CreativeTemplate data={data} />;
 
-      case "Business":
+      case "Business ⭐":
         return <BusinessTemplate data={data} />;
 
       case "Classic":
         return <ClassicTemplate data={data} />;
 
-      case "Professional":
+      case "Professional ⭐":
         return <ProfessionalTemplate data={data} />;
 
       case "Minimal":
         return <MinimalTemplate data={data} />;
 
-      case "Dark":
+      case "Dark ⭐":
         return <DarkTemplate data={data} />;
 
-      case "Elegant":
+      case "Elegant ⭐":
         return <ElegantTemplate data={data} />;
 
-      case "Corporate":
+      case "Corporate ⭐":
         return <CorporateTemplate data={data} />;
 
-      case "Compact":
+      case "Compact ⭐":
         return <CompactTemplate data={data} />;
 
-      case "Gradient":
+      case "Gradient ⭐":
         return <GradientTemplate data={data} />;
 
-      case "Developer":
+      case "Developer ⭐":
         return <DeveloperTemplate data={data} />;
 
-      case "Designer":
+      case "Designer ⭐":
         return <DesignerTemplate data={data} />;
 
-      case "Student":
+      case "Student ⭐":
         return <StudentTemplate data={data} />;
 
-      case "Executive":
+      case "Executive ⭐":
         return <ExecutiveTemplate data={data} />;
 
-      case "Luxury":
+      case "Luxury ⭐":
         return <LuxuryTemplate data={data} />;
 
-      case "Startup":
+      case "Startup ⭐":
         return <StartupTemplate data={data} />;
 
-      case "Tech":
+      case "Tech ⭐":
         return <TechTemplate data={data} />;
 
       case "ATSModern":
