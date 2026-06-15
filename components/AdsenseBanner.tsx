@@ -1,32 +1,37 @@
-"use client";
+import "./globals.css";
+import Script from "next/script";
 
-import { useEffect } from "react";
-
-declare global {
-  interface Window {
-    adsbygoogle: any[];
-  }
-}
-
-export default function AdsenseBanner() {
-  useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.log(err);
-    }
-  }, []);
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className="mt-6 flex justify-center">
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block", width: "100%" }}
-        data-ad-client="ca-pub-7618293831899526"
-        data-ad-slot="YOUR_AD_SLOT_ID"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      />
-    </div>
+    <html lang="en">
+      <head>
+        {/* Google AdSense */}
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-7618293831899526"
+        />
+
+        <Script
+          id="adsense-script"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7618293831899526"
+          crossOrigin="anonymous"
+        />
+      </head>
+
+      <body>
+        {children}
+
+        {/* Razorpay */}
+        <Script
+          src="https://checkout.razorpay.com/v1/checkout.js"
+          strategy="afterInteractive"
+        />
+      </body>
+    </html>
   );
 }
