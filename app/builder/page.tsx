@@ -857,11 +857,11 @@ export default function BuilderPage() {
   ) : (
 
     <button
-      onClick={handleWatchAd}
-      className="w-full border border-black py-5 rounded-2xl text-lg font-black"
-    >
-      Free Download
-    </button>
+  onClick={handleFreeDownload}
+  className="w-full border border-black py-5 rounded-2xl text-lg font-black"
+>
+  Free Download
+</button>
 
   )}
 
