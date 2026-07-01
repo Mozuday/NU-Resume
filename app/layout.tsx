@@ -8,23 +8,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        {/* Google AdSense */}
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-7618293831899526"
-        />
-
-        <Script
-          id="adsense-script"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7618293831899526"
-          crossOrigin="anonymous"
-        />
-      </head>
-
+      <head />
       <body>
         {children}
+
+        {/* Monetag */}
+        <Script id="monetag" strategy="afterInteractive">
+          {`
+            (function(s){
+              s.dataset.zone='11131993';
+              s.src='https://nap5k.com/tag.min.js';
+            })(
+              [document.documentElement, document.body]
+                .filter(Boolean)
+                .pop()
+                .appendChild(document.createElement('script'))
+            );
+          `}
+        </Script>
 
         {/* Razorpay */}
         <Script
