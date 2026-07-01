@@ -1,7 +1,5 @@
 "use client";
 
-import AdsenseBanner from "../../components/AdsenseBanner";
-
 import { useState } from "react";
 
 import ResumePreview from "../../components/ResumePreview";
@@ -385,13 +383,8 @@ export default function BuilderPage() {
   // WATCH AD
   // ======================================================
 
- const handleWatchAd = () => {
-  const script = document.createElement("script");
-  document.body.appendChild(script);
-
-  setTimeout(() => {
-    downloadResume();
-  }, 1000);
+ const handleFreeDownload = () => {
+  downloadResume();
 };
 
   // ======================================================
@@ -872,7 +865,6 @@ export default function BuilderPage() {
 
   )}
 
-  <AdsenseBanner />
 
 </div>
 
