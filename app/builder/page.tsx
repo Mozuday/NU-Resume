@@ -827,7 +827,11 @@ export default function BuilderPage() {
 
           <div className="bg-gray-50 border rounded-2xl p-4">
 
-  <p className="font-bold">
+            <p className="font-bold">
+    Remove ad before downloaing
+  </p>
+
+  <p className="text-gray-500 mt-1">
     Selected Template
   </p>
 
