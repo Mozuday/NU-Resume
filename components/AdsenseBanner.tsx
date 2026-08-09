@@ -16,7 +16,7 @@ export default function AdsenseBanner() {
       console.log(err);
     }
   }, []);
-
+ 
   return (
     <div className="mt-6 flex justify-center">
       <ins
